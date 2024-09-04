@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%- include('partials/head.ejs'); %>
+    <title>Simulateur de Test Sans Publicités</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <%- include('partials/header.ejs', {login: logine, date: year}); %>
+    </header>
+
+    <h1>Simulateur de Test de Permis (Sans Publicités)</h1>
+    <div id="timer">Temps restant : <span id="time"><%= timeLimit %></span> minutes</div>
+    
+    <div class="question">
+        <h2><%= question.question %></h2>
+        <img src="<%= question.image %>" alt="Question Image">
+        <form id="quiz-form" action="/test-no-ads" method="GET">
+            <div class="options">
+                <% question.options.forEach((option, optionIndex) => { %>
+                    <label>
+                        <input type="radio" name="answer" value="<%= optionIndex %>">
+                        <%= option %>
+                    </label><br>
+                <% }); %>
+            </div>
+            <input type="hidden" name="questionIndex" value="<%= questionIndex + 1 %>">
+            <input type="hidden" name="userAnswers" value='<%= userAnswers %>'>
+            <input type="hidden" name="score" value='<%= score %>'>
+            <button type="submit" id="next-button" disabled>
+                <% if (questionIndex + 1 === totalQuestions) { %>
+                    Terminer le test
+                <% } else { %>
+                    Question Suivante
+                <% } %>
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const options = document.querySelectorAll('input[name="answer"]');
+            const nextButton = document.getElementById('next-button');
+
+            options.forEach(option => {
+                option.addEventListener('change', function() {
+                    nextButton.disabled = false;
+                });
+            });
+        });
+    </script>
+
+    <script>
+        let timeLeft = Number(document.getElementById('time')) * 60;
+        const timerElement = document.getElementById('time');
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                document.getElementById('quiz-form').submit();
+            } else {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                timeLeft--;
+            }
+        }, 1000);
+    </script>
+    
+</body>
+</html>

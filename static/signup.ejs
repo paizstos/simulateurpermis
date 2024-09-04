@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%- include('partials/head.ejs'); %>
+    <title>Inscription</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Ajouter Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header>
+        <%- include('partials/header.ejs', {login: logine, date: year}); %>
+    </header>
+
+    <main>
+        <h1>Inscription - Compte Premium</h1>
+
+        <% if (notif) { %>
+            <div class="notification">
+                <p><%= notif %></p>
+            </div>
+        <% } %>
+
+        <section class="signup-form">
+            <form action="/register" method="post">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirmPassword">Confirmer le mot de passe :</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <!-- Element pour le paiement -->
+                <div id="card-element">
+                    <!-- Un élément de carte sera inséré ici. -->
+                </div>
+
+                <!-- Affichage des erreurs de carte -->
+                <div id="card-errors" role="alert"></div>
+
+                <button type="submit">S'inscrire pour 0.99 € </button>
+                <!-- Token Stripe caché -->
+                <input type="hidden" id="stripeToken" name="stripeToken">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <%= year %> Mon site</p>
+    </footer>
+    
+    <!-- Script pour Stripe -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialise Stripe avec votre clé publique
+            const stripe = Stripe('<%= publicKey %>'); // Clé publique Stripe, injectée depuis le serveur
+            const elements = stripe.elements();
+
+            // Créez une instance de l'élément de carte
+            const card = elements.create('card');
+            // Ajoutez l'élément de carte au DOM
+            card.mount('#card-element');
+
+            // Gérer les erreurs d'entrée
+            card.addEventListener('change', (event) => {
+                const displayError = document.getElementById('card-errors');
+                if (event.error) {
+                    displayError.textContent = event.error.message;
+                } else {
+                    displayError.textContent = '';
+                }
+            });
+
+            // Gestion du formulaire
+            const form = document.getElementById('signup-form');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                stripe.createToken(card).then((result) => {
+                    if (result.error) {
+                        // Affiche les erreurs dans le formulaire
+                        const errorElement = document.getElementById('card-errors');
+                        errorElement.textContent = result.error.message;
+                    } else {
+                        // Envoie le token au serveur
+                        const form = document.getElementById('signup-form');
+                        const hiddenInput = document.getElementById('stripeToken');
+                        hiddenInput.value = result.token.id;
+                        form.submit();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

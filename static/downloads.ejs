@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Téléchargement de Documents PDF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .nav_link{
+    color: rgb(102, 135, 147);
+    padding-right: 20px;
+	margin-right: 65px; 
+	text-decoration: none;
+	font-family: arial ;
+	font-style: bold;
+	padding-left: 40px;
+    }
+
+    nav ul {
+        color: black;
+        margin: 0;
+        padding: 5px;
+        overflow: hidden;
+        width: 100%
+    }
+    nav ul li {
+        display:  inline-block;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <%- include('partials/header.ejs', {login: logine, date: year}); %>
+    </header>
+  <div class="container">
+    <h1>Télécharger des Documents PDF Gratuits</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Nom du Document</th>
+          <th>Télécharger</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% pdfFiles.forEach(file => { %>
+          <tr>
+            <td><%= file.name %></td>
+            <td><a href="/pdfs/<%= file.filename %>" download>Télécharger</a></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

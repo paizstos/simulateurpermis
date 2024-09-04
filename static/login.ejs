@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%- include('partials/head.ejs'); %>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <%- include('partials/header.ejs', {login: logine, date: year}); %>
+    </header>
+
+    <main>
+        <h1>Connexion à votre compte</h1>
+
+        <% if (notif) { %>
+            <div class="notification">
+                <p><%= notif %></p>
+            </div>
+        <% } %>
+
+        <section class="login-form">
+            <form action="/connect" method="post">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+
+        <section class="signup">
+            <p>Pas encore de compte ?</p>
+            <a href="/signup" class="signup-link">Inscrivez-vous pour seulement 0,99€ par mois</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <%= year %> Mon site</p>
+    </footer>
+</body>
+</html>

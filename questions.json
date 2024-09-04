@@ -1,0 +1,408 @@
+[
+    {
+        "question": "Quelle est la signification de ce panneau ?",
+        "image": "/images/panneau1.jpg",
+        "options": ["Stop", "Cédez le passage", "Interdiction de tourner"],
+        "correctAnswer": 0,
+        "penalty": -1
+    },
+    {
+        "question": "À quelle distance devez-vous mettre votre clignotant avant de tourner ?",
+        "image": "/images/clignotant.jpg",
+        "options": ["50 mètres", "100 mètres", "30 mètres"],
+        "correctAnswer": 1,
+        "penalty": -1
+    },
+    {
+        "question": "Que signifie un feu rouge clignotant ?",
+        "image": "/images/feu_rouge.jpg",
+        "options": ["Arrêt obligatoire", "Passez prudemment", "Cédez le passage"],
+        "correctAnswer": 0,
+        "penalty": -5
+    },
+    {
+        "question": "Quelle est la vitesse maximale autorisée en agglomération ?",
+        "image": "/images/vitesse.jpg",
+        "options": ["30 km/h", "50 km/h", "70 km/h"],
+        "correctAnswer": 1,
+        "penalty": -1
+    },
+    {
+        "question": "Que signifie ce panneau triangulaire ?",
+        "image": "/images/panneau_triangulaire.jpg",
+        "options": ["Danger", "Cédez le passage", "Fin de limitation"],
+        "correctAnswer": 0,
+        "penalty": -5
+    },
+
+    {
+        "question": "Que signifie ce panneau 'Stop' ?",
+        "image": "/images/stop.jpg",
+        "options": ["Vous devez marquer un arrêt complet", "Ralentissez", "Accélérez si la voie est libre"],
+        "correctAnswer": 0,
+        "penalty": -5,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que signifie ce panneau 'Cédez le passage' ?",
+        "image": "/images/cedez_le_passage.jpg",
+        "options": ["Vous devez céder le passage à tous les véhicules", "Priorité à droite", "Intersection sans priorité"],
+        "correctAnswer": 0,
+        "penalty": -5,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que signifie ce panneau de limitation à 30 km/h ?",
+        "image": "/images/limitation_30.jpg",
+        "options": ["Vitesse maximale autorisée", "Vitesse minimale autorisée", "Vitesse recommandée"],
+        "correctAnswer": 0,
+        "penalty": -1,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que signifie un feu rouge clignotant ?",
+        "image": "/images/feu_rouge_clignotant.jpg",
+        "options": ["Passage interdit", "Attention, danger", "Cédez le passage"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que devez-vous faire lorsque vous voyez ce panneau à l'approche d'un passage à niveau ?",
+        "image": "/images/passage_a_niveau.jpg",
+        "options": ["Accélérer pour traverser", "Ralentir et s'arrêter si nécessaire", "Ignorer et continuer"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que signifie ce panneau de fin d'interdiction ?",
+        "image": "/images/fin_interdiction.jpg",
+        "options": ["Fin de toutes les interdictions précédentes", "Fin de la limitation de vitesse", "Fin de l'obligation de céder le passage"],
+        "correctAnswer": 0,
+        "penalty": -1,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que devez-vous faire si vous voyez ce panneau de travaux ?",
+        "image": "/images/travaux.jpg",
+        "options": ["Accélérer pour éviter les travaux", "Ralentir et être prudent", "Ignorer le panneau"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que signifie ce panneau de stationnement interdit ?",
+        "image": "/images/stationnement_interdit.jpg",
+        "options": ["Stationnement autorisé", "Stationnement interdit", "Arrêt autorisé"],
+        "correctAnswer": 1,
+        "penalty": -1,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que signifie ce panneau de voie réservée aux bus ?",
+        "image": "/images/voie_bus.jpg",
+        "options": ["Voie interdite aux voitures", "Voie réservée aux bus uniquement", "Voie réservée aux bus, taxis, et vélos"],
+        "correctAnswer": 2,
+        "penalty": -3,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que signifie ce panneau indiquant un double sens de circulation ?",
+        "image": "/images/double_sens.jpg",
+        "options": ["Sens unique", "Double sens", "Route prioritaire"],
+        "correctAnswer": 1,
+        "penalty": -1,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Quelle est la signification de ce panneau triangulaire avec un point d'exclamation ?",
+        "image": "/images/danger.jpg",
+        "options": ["Danger indéterminé", "Passage piéton", "Croisement dangereux"],
+        "correctAnswer": 0,
+        "penalty": -3,
+        "category": "Signalisation"
+    },
+    {
+        "question": "À quelle distance devez-vous mettre votre clignotant avant de tourner ?",
+        "image": "/images/clignotant.jpg",
+        "options": ["50 mètres", "100 mètres", "30 mètres"],
+        "correctAnswer": 1,
+        "penalty": -1,
+        "category": "Priorités"
+    },
+    {
+        "question": "Que devez-vous faire à l'approche d'un passage piéton non signalé ?",
+        "image": "/images/passage_pieton.jpg",
+        "options": ["Accélérer", "Ralentir", "S'arrêter seulement si un piéton est présent"],
+        "correctAnswer": 2,
+        "penalty": -1,
+        "category": "Priorités"
+    },
+    {
+        "question": "Quelle est la règle de priorité à une intersection sans signalisation ?",
+        "image": "/images/intersection.jpg",
+        "options": ["Priorité à gauche", "Priorité aux véhicules en face", "Priorité à droite"],
+        "correctAnswer": 2,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "Sur une route à double sens, quand pouvez-vous dépasser un véhicule ?",
+        "image": "/images/double_sens.jpg",
+        "options": ["Toujours", "Seulement si la ligne est discontinue", "Seulement en côte"],
+        "correctAnswer": 1,
+        "penalty": -3,
+        "category": "Priorités"
+    },
+    {
+        "question": "Quel comportement adopter dans un rond-point ?",
+        "image": "/images/rond_point.jpg",
+        "options": ["Priorité à droite", "Priorité aux véhicules déjà engagés dans le rond-point", "Priorité aux véhicules venant de gauche"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "Que devez-vous faire à l'approche d'une intersection avec un panneau de priorité ponctuelle ?",
+        "image": "/images/priorite_ponctuelle.jpg",
+        "options": ["Cédez le passage aux véhicules venant de gauche", "Priorité aux véhicules venant de droite", "Priorité aux véhicules en face"],
+        "correctAnswer": 2,
+        "penalty": -3,
+        "category": "Priorités"
+    },
+    {
+        "question": "Comment devez-vous réagir face à un feu orange ?",
+        "image": "/images/feu_orange.jpg",
+        "options": ["Accélérer pour passer", "Ralentir et vous arrêter", "Ignorer et continuer"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "À quelle vitesse devez-vous rouler pour céder le passage à un véhicule d'urgence ?",
+        "image": "/images/vehicule_urgence.jpg",
+        "options": ["Ralentir à 10 km/h", "S'arrêter", "Continuer à votre vitesse normale"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "Que devez-vous faire si un tramway s'arrête pour prendre des passagers ?",
+        "image": "/images/tramway.jpg",
+        "options": ["Passer à droite du tramway", "Vous arrêter derrière le tramway", "Contourner le tramway par la gauche"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "Que devez-vous faire si vous arrivez à une intersection en même temps qu'un véhicule venant de gauche ?",
+        "image": "/images/intersection_gauche.jpg",
+        "options": ["Passer en premier", "Cédez le passage au véhicule venant de gauche", "Cédez le passage si le véhicule est plus proche"],
+        "correctAnswer": 0,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "Quel est le niveau d'alcoolémie maximal autorisé pour conduire ?",
+        "image": "/images/alcoolemie.jpg",
+        "options": ["0.5 g/L de sang", "0.8 g/L de sang", "1.0 g/L de sang"],
+        "correctAnswer": 0,
+        "penalty": -3,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Que risquez-vous si vous conduisez sous l'influence de l'alcool au-dessus du seuil autorisé ?",
+        "image": "/images/alcool_risque.jpg",
+        "options": ["Une amende", "La prison", "Une amende et un retrait de permis"],
+        "correctAnswer": 2,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Quelle est la vitesse maximale autorisée sur une autoroute en Belgique ?",
+        "image": "/images/autoroute.jpg",
+        "options": ["90 km/h", "120 km/h", "130 km/h"],
+        "correctAnswer": 1,
+        "penalty": -1,
+        "category": "Vitesse"
+    },
+    {
+        "question": "Quelle est la vitesse maximale autorisée en agglomération ?",
+        "image": "/images/vitesse_agglomeration.jpg",
+        "options": ["50 km/h", "70 km/h", "90 km/h"],
+        "correctAnswer": 0,
+        "penalty": -1,
+        "category": "Vitesse"
+    },
+    {
+        "question": "Que devez-vous faire en cas de brouillard épais sur l'autoroute ?",
+        "image": "/images/brouillard.jpg",
+        "options": ["Allumer vos feux de détresse", "Ralentir et allumer les feux de croisement", "Continuer à la même vitesse"],
+        "correctAnswer": 1,
+        "penalty": -3,
+        "category": "Vitesse"
+    },
+    {
+        "question": "Quelle est la vitesse maximale autorisée sur une route à double sens hors agglomération ?",
+        "image": "/images/double_sens_route.jpg",
+        "options": ["90 km/h", "80 km/h", "100 km/h"],
+        "correctAnswer": 0,
+        "penalty": -1,
+        "category": "Vitesse"
+    },
+    {
+        "question": "Que devez-vous faire si vous roulez en dessous de la vitesse minimale autorisée sur une autoroute ?",
+        "image": "/images/vitesse_minimale.jpg",
+        "options": ["Rien, vous êtes en sécurité", "Accélérer pour atteindre la vitesse minimale", "Ralentir encore plus"],
+        "correctAnswer": 1,
+        "penalty": -3,
+        "category": "Vitesse"
+    },
+    {
+        "question": "Quelle est la vitesse maximale autorisée sur une route nationale en Belgique ?",
+        "image": "/images/route_nationale.jpg",
+        "options": ["90 km/h", "110 km/h", "120 km/h"],
+        "correctAnswer": 0,
+        "penalty": -1,
+        "category": "Vitesse"
+    },
+    {
+        "question": "Que devez-vous faire si vous approchez d'un virage dangereux ?",
+        "image": "/images/virage.jpg",
+        "options": ["Ralentir", "Accélérer", "Maintenir votre vitesse"],
+        "correctAnswer": 0,
+        "penalty": -3,
+        "category": "Vitesse"
+    },
+    {
+        "question": "À quoi devez-vous faire attention lorsque vous voyez ce panneau 'Attention enfants' ?",
+        "image": "/images/attention_enfants.jpg",
+        "options": ["Présence possible d'enfants", "Présence d'un passage piéton", "Fin de zone scolaire"],
+        "correctAnswer": 0,
+        "penalty": -3,
+        "category": "Signalisation"
+    },
+    {
+        "question": "Que devez-vous faire si vous voyez un véhicule avec des feux de détresse allumés sur l'autoroute ?",
+        "image": "/images/feux_detresse.jpg",
+        "options": ["Ignorer", "Ralentir et doubler avec précaution", "Accélérer pour éviter le danger"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Que risquez-vous si vous dépassez la vitesse maximale autorisée de plus de 20 km/h ?",
+        "image": "/images/infraction_vitesse.jpg",
+        "options": ["Une amende", "Un retrait de permis", "Une amende et un retrait de permis"],
+        "correctAnswer": 2,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Que devez-vous faire si vous causez un accident de la route ?",
+        "image": "/images/accident.jpg",
+        "options": ["Fuir", "Vous arrêter et appeler les secours", "Continuer votre route"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Quelle est la durée minimale de suspension du permis en cas de conduite sous l'influence de l'alcool ?",
+        "image": "/images/suspension_permis.jpg",
+        "options": ["3 mois", "6 mois", "1 an"],
+        "correctAnswer": 0,
+        "penalty": -3,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Que devez-vous faire en cas de panne sur l'autoroute ?",
+        "image": "/images/panne_autoroute.jpg",
+        "options": ["Sortir du véhicule et attendre sur la voie", "Allumer vos feux de détresse et vous placer derrière les glissières de sécurité", "Continuer à rouler lentement"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Que risquez-vous en cas de conduite sans assurance ?",
+        "image": "/images/assurance.jpg",
+        "options": ["Une amende", "Une amende et un retrait de permis", "Rien si vous ne causez pas d'accident"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Quelle est la sanction pour un refus de priorité à droite ?",
+        "image": "/images/priorite_droite.jpg",
+        "options": ["Amende", "Retrait de permis", "Amende et retrait de permis"],
+        "correctAnswer": 0,
+        "penalty": -3,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Quelle est la sanction pour un stationnement sur une place réservée aux personnes handicapées sans autorisation ?",
+        "image": "/images/stationnement_handicape.jpg",
+        "options": ["Aucune", "Amende", "Amende et retrait de points"],
+        "correctAnswer": 2,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Quelle est la règle à respecter dans une zone de rencontre ?",
+        "image": "/images/zone_rencontre.jpg",
+        "options": ["Priorité aux piétons", "Priorité aux cyclistes", "Priorité aux voitures"],
+        "correctAnswer": 0,
+        "penalty": -3,
+        "category": "Priorités"
+    },
+    {
+        "question": "Que devez-vous faire lorsque vous approchez d'un bus scolaire à l'arrêt ?",
+        "image": "/images/bus_scolaire.jpg",
+        "options": ["Ralentir et dépasser avec précaution", "Accélérer pour passer rapidement", "Vous arrêter et attendre le départ du bus"],
+        "correctAnswer": 0,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "Que devez-vous faire lorsque vous arrivez à un passage à niveau sans barrières ?",
+        "image": "/images/passage_niveau.jpg",
+        "options": ["Accélérer pour traverser rapidement", "Vous arrêter et vérifier s'il n'y a pas de train", "Passer sans ralentir"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Priorités"
+    },
+    {
+        "question": "Que devez-vous faire si vous renversez un piéton ?",
+        "image": "/images/pieton.jpg",
+        "options": ["Continuer votre route", "Vous arrêter et appeler les secours", "Fuir pour éviter des ennuis"],
+        "correctAnswer": 1,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Quelle est la sanction pour un dépassement dangereux ?",
+        "image": "/images/danger_depasser.jpg",
+        "options": ["Aucune si personne n'est blessé", "Amende", "Amende et retrait de permis"],
+        "correctAnswer": 2,
+        "penalty": -5,
+        "category": "Infractions et sanctions"
+    },
+    {
+        "question": "Que devez-vous faire à l'approche d'un ralentisseur de vitesse ?",
+        "image": "/images/ralentisseur.jpg",
+        "options": ["Accélérer", "Maintenir votre vitesse", "Ralentir"],
+        "correctAnswer": 2,
+        "penalty": -3,
+        "category": "Vitesse"
+    },
+    {
+        "question": "Quelle est la vitesse maximale autorisée sur une voie rapide en Belgique ?",
+        "image": "/images/voie_rapide.jpg",
+        "options": ["100 km/h", "110 km/h", "120 km/h"],
+        "correctAnswer": 1,
+        "penalty": -1,
+        "category": "Vitesse"
+    }
+
+   
+]

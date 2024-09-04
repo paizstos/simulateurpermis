@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('partials/head.ejs'); %>
+    </head>
+
+    <body>
+        <header>
+            <%- include('partials/header.ejs', {login: logine, date: year}); %>
+        </header>
+        <!-- Espace publicitaire -->
+        <div class="adsense-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                data-ad-slot="XXXXXXXXXX"
+                data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <h1>Résultat du Test</h1>
+        <div class="result">
+            <p>Vous avez obtenu un score de <%= score %> sur 50.</p>
+            <a href="/test">Recommencer le test</a>
+        </div>
+
+        <h2>Réponses Incorrectes et Corrections :</h2>
+        <% if (corrections && corrections.length > 0) { %>
+            <ul>
+                <% corrections.forEach(function(correction, index) { %>
+                    <li>
+                        <strong>Question : </strong><%= correction.question %><br>
+                        <strong>Votre réponse : </strong><%= correction.selectedAnswer %><br>
+                        <strong>Bonne réponse : </strong><%= correction.correctAnswer %><br>
+                        <strong>Pénalité : </strong><%= correction.penalty %> points</br><br>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>Félicitations ! Vous n'avez fait aucune erreur.</p>
+        <% } %>
+    </body>
+
+</html>

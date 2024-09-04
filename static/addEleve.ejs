@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('partials/head.ejs'); %>
+    </head>
+    
+    <body>
+        <header>
+            <%- include('partials/header.ejs', {login: logine, date: year}); %>
+        </header>     </br>     </br>
+        
+        
+
+<h1>Add a student</h1>
+<form id="newEleve" action="/newEleve" method="post">
+    <table id="newEleve" width="80%" height="500" border="1">
+        <tr>
+            <td width="450px">Noma: <input name="noma" type="text"></td>
+            <td width="450px">Nom: <input name="nom" type="text"></td>
+            <td width="450px">Prenom: <input name="prenom" type="text"></td>
+            <td rowspan="7">Classe: <input name="classe" type="text"></td>
+        </tr>
+        <tr>
+            <td>Age: <input name="age" type="number" ></td>
+        </tr>
+        <tr>
+            <td>Solde restant P1: <input name="solde1" type="number" required></td>
+            <td>Solde restant P2: <input name="solde2" type="number" required></td>
+            <td>Solde restant P3: <input name="solde3" type="number" required></td>
+        </tr>
+        
+    </table>
+	</br>
+    <input type="submit" value="Enregistrer">
+</form>
+
+</body>
+</html>

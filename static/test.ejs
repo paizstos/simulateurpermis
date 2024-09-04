@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('partials/head.ejs'); %>
+    </head>
+
+    <body>
+        <header>
+            <%- include('partials/header.ejs', {login: logine, date: year}); %>
+        </header>
+        <!-- Espace publicitaire -->
+        <div class="adsense-container">
+            <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                    data-ad-slot="XXXXXXXXXX"
+                    data-ad-format="auto"></ins>
+            <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <h1>Simulateur de Test de Permis</h1>
+        <div id="timer">Temps restant : <span id="time">60</span> secondes</div>
+        
+        <div class="question">
+            <h2><%= question.question %></h2>
+            <img src="<%= question.image %>" alt="Question Image">
+            <form id="quiz-form" action="/test" method="GET">
+                <div class="options">
+                    <% question.options.forEach((option, optionIndex) => { %>
+                        <label>
+                            <input type="radio" name="answer" value="<%= optionIndex %>">
+                            <%= option %>
+                        </label><br>
+                    <% }); %>
+                </div>
+                <!-- Masquer l'index de la question, les réponses de l'utilisateur et le score dans le formulaire -->
+                <input type="hidden" name="questionIndex" value="<%= questionIndex + 1 %>">
+                <input type="hidden" name="userAnswers" value='<%= userAnswers %>'>
+                <input type="hidden" name="score" value='<%= score %>'>
+                <button type="submit" id="next-button" disabled>
+                    <% if (questionIndex + 1 === totalQuestions) { %>
+                        Terminer le test
+                    <% } else { %>
+                        Question Suivante
+                    <% } %>
+                </button>
+            </form>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const options = document.querySelectorAll('input[name="answer"]');
+                const nextButton = document.getElementById('next-button');
+        
+                options.forEach(option => {
+                    option.addEventListener('change', function() {
+                        // Si une option est sélectionnée, activer le bouton
+                        nextButton.disabled = false;
+                    });
+                });
+            });
+        </script>
+
+    <script>
+        // Timer script
+        let timeLeft = 60;
+        const timerElement = document.getElementById('time');
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                document.getElementById('quiz-form').submit();
+            } else {
+                timerElement.textContent = --timeLeft;
+            }
+        }, 1000);
+    </script>
+        
+    </body>
+</html>
